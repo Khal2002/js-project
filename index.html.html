@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="temp.css">
+    <title>cruds system</title>
+  
+</head>
+<body>
+    <div class="crudes">
+        <div class="head">
+            <h1>crud</h1>
+            <p>product management system</p>
+
+        </div>
+        <div class="inbuts">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup ="getTotale()"  type="number" placeholder="price" id="price">
+                <input onkeyup ="getTotale()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup ="getTotale()" type="number" placeholder="ads" id="ads">
+                <input onkeyup ="getTotale()" type="number" placeholder="discount" id="discount">
+                <small  id="total"> </small>
+
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="creat">creat</button>
+        </div>    
+
+        <div class="output">
+            <div class="search-block">
+                <input onkeyup="searchaction(this.value)" type="text" placeholder="Search" id="search">
+                <div id="deletbtn"></div>
+                <div class="search-but">
+                    <button onclick="searchmood(this.id)" id="search-title">search by title</button>
+                    <button onclick="searchmood(this.id)" id="category">search by category</button>
+
+                </div>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+
+                    </tr>
+                    <tbody id="tbody">
+                        
+                            </tbody>
+                </table>
+                
+            </div>
+
+
+        </div>
+
+        <script src="temp.js"></script>
+    </div>
+
+    
+    
+</body>
+</html>
